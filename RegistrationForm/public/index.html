@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration-form</title>
+
+<!--    <link rel="stylesheet" type="text/css" href="Style.css">-->
+
+    <link rel="stylesheet" type="text/css" href="css/signup-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--    This web url: https://registration-form-d4937.web.app/-->
+
+</head>
+<body>
+
+    <div class="container" id="container">
+
+        <div class="form-container sign-up-container"
+        >
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"> <i class="fa fa-facebook"></i> </a>
+                    <a href="#" class="social"> <i class="fa fa-google"></i> </a>
+                    <a href="#" class="social"> <i class="fa fa-linkedin"></i> </a>
+                </div>
+                <span> or use your email for registration</span>
+                <input type="text" placeholder="Name" name="name" id="signUp-userName">
+                <input type="email" placeholder="Email" name="email" id="signUp-userEmail">
+                <input type="password" placeholder="Password" name="password" id="signUp-userPassword">
+
+                <button class="sign-up-button" id="signUpButton" type="button">SignUp</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="#" id="login-form">
+                <h1>Log In</h1>
+                <div class="social-container">
+                    <a href="#" class="social"> <i class="fa fa-facebook"></i> </a>
+                    <a href="#" class="social"> <i class="fa fa-google"></i> </a>
+                    <a href="#" class="social"> <i class="fa fa-twitter"></i> </a>
+                </div>
+                <span> or use your account</span>
+                <input type="email" placeholder="Email" name="email" id="logIn-userEmail">
+                <input type="password" placeholder="Password" name="password" id="logIn-userPassword">
+                <a href="#" class="forgot-password">Forgot Password</a>
+
+                <button class="sign-in-button" id="logInButton" type="button" onclick="logIn()">Log In</button>
+            </form>
+
+
+            <form class="ghost-form" id="login-form-ghost">
+                <h1>Welcome User</h1>
+                <span class="ghost-span">Thank you to being with us </span>
+                <span id="ghost-user-email"></span>
+                <button class="logout-button" id="logoutButton" type="button" onclick="logout()">Logout</button>
+            </form>
+
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back</h1>
+                    <p>To keep connected with us please signup with your personal info</p>
+                    <button class="ghost" id="logInGhost">Log In</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friends!</h1>
+                    <p>Enter your detail to start journey with us</p>
+                    <button class="ghost" id="signUpGhost">Sign Up</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAekAkR33dVeC--SqqES9A5h_V5rrcrnBw",
+            authDomain: "registration-form-d4937.firebaseapp.com",
+            databaseURL: "https://registration-form-d4937.firebaseio.com",
+            projectId: "registration-form-d4937",
+            storageBucket: "registration-form-d4937.appspot.com",
+            messagingSenderId: "542081691972",
+            appId: "1:542081691972:web:1843f852fba7f7a48de711",
+            measurementId: "G-FWSZ8WHMQV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="js/main.js" type="text/javascript"></script>
+
+</body>
+</html>
